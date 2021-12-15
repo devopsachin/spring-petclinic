@@ -21,6 +21,8 @@ node {
    // sh "sudo apt-get install npm -y"
   }
          stage ('Building Code'){
+           sh "rm -rf node-modules package-lock.json"
+
            sh "cd myproject && npm install"
      
            
