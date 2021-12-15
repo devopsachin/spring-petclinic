@@ -18,6 +18,7 @@ node {
   }
   
          stage ('Building Code'){
+           sh "chmod 777 spring-petclinic"
            sh "cd spring-petclinic"
            sh "./mvnw package"
          }
