@@ -19,7 +19,9 @@ node {
   
          stage ('Building Code'){
            sh "pwd"
-           sh "cd spring-petclinic && ./mvnw package"
+           sh "cd spring-petclinic"
+           sh " mvn clean "
+           sh "./mvnw package"
          }
   stage ('Deploy'){
     sh "ssh pet@ec2-3-108-67-31.ap-south-1.compute.amazonaws.com mkdir -p /var/app/deploy"
