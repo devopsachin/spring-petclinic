@@ -18,6 +18,7 @@ node {
   }
   
          stage ('Building Code'){
+           sh "pwd"
            sh "./mvnw package"
          }
   stage ('Deploy'){
