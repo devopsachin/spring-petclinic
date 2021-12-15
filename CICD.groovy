@@ -26,7 +26,10 @@ node {
          stage ('Building Code'){
            sh "mvn package"
          }
-     
+  stage ('Deploy'){
+    sh "ssh pet@ec2-3-108-67-31.ap-south-1.compute.amazonaws.com mkdir -p /var/app/deploy"
+       sh "scp -r spring-petclinic pet@ec2-3-108-67-31.ap-south-1.compute.amazonaws.com:/var/app/deploy"
+  }
          stage ('Hello Wprld'){
     sh "echo Hello World !"
   }
