@@ -20,7 +20,7 @@ node {
          stage ('Building Code'){
            sh "pwd"
            sh "cd spring-petclinic"
-           sh " mvn clean "
+           sh "mvn clean install -U"
            sh "./mvnw package"
          }
   stage ('Deploy'){
