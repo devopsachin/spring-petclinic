@@ -18,11 +18,11 @@ node {
 
   }
   stage ('installing Dependences'){
-    sh "sudo apt-get install npm -y"
+   // sh "sudo apt-get install npm -y"
   }
          stage ('Building Code'){
-           sh "cd myproject "
-           sh "npm install"
+           sh "cd myproject && npm install"
+     
            
          }
   stage ('Deploy'){
