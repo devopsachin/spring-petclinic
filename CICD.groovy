@@ -7,8 +7,10 @@ node {
   def rootdir="/var/lib/jenkins"
 
   stage ('Preparing Code'){
+            sh "ls -lh"
             sh "rm -rf spring-petclinic"
-           sh "git clone https://github.com/devopsachin/spring-petclinic.git"
+           sh "git clone https://github.com/spring-projects/spring-petclinic.git"
+           
            // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
            sh "ls -lart ./*" 
            // List all branches in your repo. 
@@ -18,7 +20,6 @@ node {
   }
   
          stage ('Building Code'){
-           sh "chmod 777 spring-petclinic"
            sh "cd spring-petclinic"
            sh "./mvnw package"
          }
