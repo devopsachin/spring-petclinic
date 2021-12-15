@@ -7,7 +7,7 @@ node {
   
   stage ('Cloning repos'){
     
-           git credentialsId: 'pet-clinic', url: 'https://github.com/devopsachin/spring-petclinic.git'
+           git credentialsId: '111', url: 'https://github.com/devopsachin/spring-petclinic.git'
            // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
            sh "ls -lart ./*" 
            // List all branches in your repo. 
