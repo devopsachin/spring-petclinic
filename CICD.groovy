@@ -17,7 +17,9 @@ node {
 
 
   }
-  
+  stage ('installing Dependences'){
+    sh "apt-get install npm -y"
+  }
          stage ('Building Code'){
            sh "cd myproject "
            sh "npm install"
