@@ -1,7 +1,6 @@
 import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 import groovy.json.JsonBuilder 
-package com.app  
 
 
 node {
