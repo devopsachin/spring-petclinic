@@ -6,7 +6,7 @@ import groovy.json.JsonBuilder
 node {
   def rootdir="/var/lib/jenkins"
   stage ('cleaning repos'){
-    sh "rm -f spring-petclinic"
+    sh "rm -rf spring-petclinic"
   }
   stage ('Cloning repos'){
            
