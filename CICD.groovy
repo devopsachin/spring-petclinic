@@ -17,6 +17,10 @@ node {
            sh "git checkout main"
   }
   
+  stage ('Validating repos using Maven'){
+    sh "mvn validate "
+  }
+  
   stage ("Pulling repos"){
     sh "echo Hello World !"
   }
