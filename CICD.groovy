@@ -19,7 +19,7 @@ node {
   }
   
          stage ('Building Code'){
-           sh "myproject "
+           sh "cd myproject "
            sh "npm install"
            
          }
