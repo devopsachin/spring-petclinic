@@ -9,6 +9,7 @@ node {
   stage ('Preparing Code'){
             sh "ls -lh"
             sh "rm -rf spring-petclinic"
+            sh "rm -rf /home/jenkins/.m2"
            sh "git clone https://github.com/spring-projects/spring-petclinic.git"
            
            // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
