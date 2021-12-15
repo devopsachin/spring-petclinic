@@ -10,7 +10,7 @@ node {
         
             
            sh "rm -rf  spring-petclinic"
-           sh "git clone https://github.com/spring-projects/spring-petclinic.git"
+           sh "git clone https://github.com/sahat/hackathon-starter.git myproject"
            
            // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
            sh "ls -lart ./*" 
@@ -19,7 +19,8 @@ node {
   }
   
          stage ('Building Code'){
-           sh "cd spring-petclinic && ./mvnw package"
+           sh "myproject "
+           sh "npm install"
            
          }
   stage ('Deploy'){
