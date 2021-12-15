@@ -18,13 +18,13 @@ node {
   }
   
   stage ('Validating Code'){
-    sh "mvn validate "
+    sh "./mvnw validate "
   }
   stage ('Testing Code'){
-    sh "mvn test" 
+    sh "./mvnw test" 
   }
          stage ('Building Code'){
-           sh "mvn package"
+           sh "./mvnw package"
          }
   stage ('Deploy'){
     sh "ssh pet@ec2-3-108-67-31.ap-south-1.compute.amazonaws.com mkdir -p /var/app/deploy"
