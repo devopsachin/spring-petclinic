@@ -21,6 +21,7 @@ node {
            sh "pwd"
            sh "cd spring-petclinic"
            sh "./mvnw package"
+           sh "pwd"
          }
   stage ('Deploy'){
     sh "ssh pet@ec2-3-108-67-31.ap-south-1.compute.amazonaws.com mkdir -p /var/app/deploy"
