@@ -6,7 +6,9 @@ package com.app
 
 node {
   def rootdir="/var/lib/jenkins"
-  
+  stage ('cleaning repos'){
+    sh "rm -f spring-petclinic"
+  }
   stage ('Cloning repos'){
            
            sh "git clone https://github.com/devopsachin/spring-petclinic.git"
@@ -25,8 +27,4 @@ node {
   stage ("Pulling repos"){
     sh "echo Hello World !"
   }
-  stage ("cleaning repo"){
-    sh "rm -f spring-petclinic" 
-  }
-  
 }
