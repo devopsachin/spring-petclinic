@@ -20,9 +20,6 @@ node {
   stage ('Validating Code'){
     sh "./mvnw validate "
   }
-  stage ('Testing Code'){
-    sh "./mvnw test" 
-  }
          stage ('Building Code'){
            sh "./mvnw package"
          }
